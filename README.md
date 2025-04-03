@@ -1,54 +1,61 @@
-# React + TypeScript + Vite
+# Project Setup Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[BEES GROUP] Technical Assessment for Front-End Developer Role
 
-Currently, two official plugins are available:
+- I've made the interface for the whole logic test part in the Task1 component file
+- App Development Test in the Task2 component file
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+├── src/
+│   ├── containers/
+          ├── Task1
+          ├── Task2
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Make sure you have the following installed on your system:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- **Node.js** (Recommended: latest LTS version) - [Download Node.js](https://nodejs.org/)
+- **npm** (comes with Node.js) or **yarn**
+
+## Installation
+
+### 1. Clone the Repository
+
+```sh
+git clone git@github.com:jihto/Bees-hiring-test.git
+cd Bees-hiring-test
 ```
+
+### 2. Install Dependencies
+
+Using npm:
+
+```sh
+npm install
+```
+
+Using yarn:
+
+```sh
+yarn install
+```
+
+### 3. Start the Development Server
+
+Using npm:
+
+```sh
+npm run dev
+```
+
+Using yarn:
+
+```sh
+yarn dev
+```
+
+The application should now be running at `http://localhost:5173/` (or another port if Vite assigns one dynamically).
