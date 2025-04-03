@@ -1,5 +1,6 @@
 import { useState } from 'react'  
-import Task1 from './containers/Task1'; 
+import Task1 from './containers/Task1';
+import Task2 from './containers/Task2';
 import BeesIcon from '../src/assets/images/icon-bees.svg';
 function App() { 
   const [activeTab, setActiveTab] = useState(1);
@@ -46,7 +47,12 @@ function App() {
             activeTab === 1 
               ? <Task1 />
               : null
-          } 
+          }
+          {
+            activeTab === 2 
+              ? <Task2 />
+              : null
+          }
         </div>
     </div>
   )
